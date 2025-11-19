@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Killer's Macro</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        background: white;
+        width: 90%;
+        max-width: 400px;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    h2 {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    #passwordBox {
+        margin: 20px 0;
+        padding: 15px;
+        background: #e7fbe7;
+        border-left: 5px solid #28a745;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 12px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .main-btn {
+        background: #007bff;
+        color: white;
+    }
+
+    .main-btn:disabled {
+        background: #99c2ff;
+        cursor: not-allowed;
+    }
+
+    .main-btn:hover:enabled {
+        background: #005fcc;
+    }
+
+    .tutorial-btn {
+        background: #28a745;
+        color: white;
+    }
+
+    .tutorial-btn:disabled {
+        background: #a8d5a8;
+        cursor: not-allowed;
+    }
+
+    .tutorial-btn:hover:enabled {
+        background: #1e7c33;
+    }
+
+    .disclaimer {
+        text-align: left;
+        font-size: 14px;
+        margin-top: 15px;
+        background: #fff3cd;
+        border-left: 5px solid #ffecb5;
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .disclaimer input {
+        margin-right: 8px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Killer's Macro</h2>
+
+    <div id="passwordBox">Password: <span style="color:#28a745;">2004</span></div>
+
+    <div class="disclaimer">
+        <label>
+            <input type="checkbox" id="acceptTerms" onclick="toggleButtons()"> I have read and accept the terms and conditions
+        </label>
+        <ol>
+            <li>This tool/macro is provided for educational and entertainment purposes only.</li>
+            <li>Use at your own risk. We recommend using a secondary or noob account.</li>
+            <li>This macro may not be compatible with all devices.</li>
+            <li>We are not responsible for any account bans, restrictions, or other consequences resulting from its use.</li>
+            <li>By using this tool, you acknowledge and accept these risks.</li>
+            <li>Do not use this tool for unfair gameplay in tournaments or competitions.</li>
+        </ol>
+    </div>
+
+    <button class="main-btn" id="getLinkBtn" onclick="openLink()" disabled>Get Link</button>
+
+    <button class="tutorial-btn" id="tutorialBtn" onclick="watchTutorial()" disabled>Watch Tutorials</button>
+</div>
+
+<script>
+function toggleButtons() {
+    const checkbox = document.getElementById("acceptTerms");
+    const getLinkBtn = document.getElementById("getLinkBtn");
+    const tutorialBtn = document.getElementById("tutorialBtn");
+
+    getLinkBtn.disabled = !checkbox.checked;
+    tutorialBtn.disabled = !checkbox.checked;
+}
+
+function openLink() {
+    window.open("https://www.mediafire.com/file/28xf1fitl0q5uhk/Sensi_By_killer.zip/file", "_blank");
+}
+
+function watchTutorial() {
+    window.location.href = "#"; // Add your tutorial link here
+}
+</script>
+
+</body>
+</html>
